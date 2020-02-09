@@ -1,0 +1,40 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: #e2ada1;
+}
+.loader{
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.loader:after{
+    content: "";
+    display: block;
+    border-radius: 50%;
+    width: 0px;
+    height: 0px;
+    margin: 6px;
+    border: 30px solid #ffff;
+    border-color: #ffffff transparent #ffffff transparent;
+    animation: load 1s ease-in-out infinite;
+
+}
+@keyframes load{
+    0%{
+       transform: rotate(0deg);
+       animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 019);
+    }
+    50%{
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100%{
+        transform: rotate(1800deg);
+    }
+}
